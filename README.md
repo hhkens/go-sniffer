@@ -41,7 +41,10 @@ $ apt-get install libpcap-dev
 ```
 ### RUN
 ``` bash
-$ go get -v -u github.com/40t/go-sniffer
+$ go mod init github.com/40t/go-sniffer
+$ go mod tidy
+$ go build
+
 $ cp -rf $(go env GOPATH)/bin/go-sniffer /usr/local/bin
 $ go-sniffer
 ```
